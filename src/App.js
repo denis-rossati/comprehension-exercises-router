@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
+import { Route, Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <Home />
+      <div>
+        <Route path='/' component={ Home } />
+      </div>
     );
   }
 }
