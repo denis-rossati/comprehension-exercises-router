@@ -10,7 +10,10 @@ ReactDOM.render(
     <BrowserRouter >
       <Route exact path='/' component={ App } />
       <Route path='/about' component={ About } />
-      <Route path='/users' component={ Users } />
+      <Route path='/users/:id' render={(props) => <Users {...props} greetingMessage='Good Morning' id="10" /> } />
+      <Link to='/'> Home </Link>
+      <Link to='/about'> About </Link>
+      <Link to='/users'> Users </Link>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

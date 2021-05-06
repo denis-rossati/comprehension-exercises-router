@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-class Users extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Users</h2>
-        <p> My awesome Users component </p>
-        <Link to='/about'> About </Link>
-        <Link to='/'> Home </Link>
-      </div>
-    );
-  }
-};
+
+const Users = ({ greetingMessage = 'Hi There', match:{ params:{ id } } }) => (
+  <div>
+    <h2> Users </h2>
+    <p> {greetingMessage}, this is my awesome Users component. My id is { id } </p>
+  </div>
+);
 
 export default Users;
